@@ -1,0 +1,49 @@
+package tjofraes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import interfaces.IDocument;
+import interfaces.IElement;
+import interfaces.IElementIterator;
+
+// Composite class for the elements within a document
+public class Document implements IDocument
+{
+	private List<IElement> elements = new ArrayList<>();
+
+	@Override
+	public IElementIterator getIterator()
+	{
+		return new DocumentIterator();
+	}
+
+	public void addElement(IElement component)
+	{
+		elements.add(component);
+	}
+
+	private class DocumentIterator implements IElementIterator
+	{
+		private int currentIndex = 0;
+
+		@Override
+		public boolean hasNext()
+		{
+			return currentIndex < elements.size();
+		}
+
+		@Override
+		public IElement next()
+		{
+			if (!hasNext())
+			{
+				return null;
+			}
+
+			IElement element = elements.get(currentIndex);
+			currentIndex++;
+			return element;
+		}
+	}
+}

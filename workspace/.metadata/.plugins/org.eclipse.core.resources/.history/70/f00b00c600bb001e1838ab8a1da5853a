@@ -1,0 +1,11 @@
+package clients;
+
+import tjofraes.*;
+
+public class ServiceHost
+{
+	public static void main(String[] args)
+	{
+		AbstractElementFactory creator = new ConcreteElementFactory();
+	}
+}

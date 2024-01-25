@@ -1,0 +1,15 @@
+package textDocBuilder.factories;
+
+import textDocBuilder.enums.FontSizes;
+import textDocBuilder.interfaces.IFont;
+
+public abstract class AbstractFontFactory
+{
+	public IFont createFont(FontSizes size)
+	{
+		IFont font = getFont(size);
+		return font;
+	}
+	
+	protected abstract IFont getFont(FontSizes size);
+}

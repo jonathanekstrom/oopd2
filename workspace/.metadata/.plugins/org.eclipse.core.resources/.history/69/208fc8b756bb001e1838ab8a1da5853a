@@ -1,0 +1,10 @@
+package textDocBuilder.factories;
+
+import textDocBuilder.enums.FontSizes;
+import textDocBuilder.enums.FontTypes;
+
+public abstract class AbstractFontFactory
+{
+	protected abstract FontTypes getFontType();
+	protected abstract FontSizes getFontSize();
+}

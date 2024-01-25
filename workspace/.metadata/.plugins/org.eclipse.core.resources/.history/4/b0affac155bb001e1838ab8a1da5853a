@@ -1,0 +1,14 @@
+package textDocBuilder.factories;
+
+import textDocBuilder.domain.Font;
+
+public abstract class AbstractFontFactory
+{
+	public Font createFont(Font font)
+	{
+		Font f = getFont(font);
+		return f;
+	}
+
+	protected abstract Font getFont(Font font);
+}

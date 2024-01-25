@@ -1,0 +1,6 @@
+package factories;
+
+public interface IElement
+{
+	void render();
+}

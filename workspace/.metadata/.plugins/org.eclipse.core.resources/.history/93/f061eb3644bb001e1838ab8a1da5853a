@@ -1,0 +1,6 @@
+package textDocBuilder.enums;
+
+public enum FontSize
+{
+
+}

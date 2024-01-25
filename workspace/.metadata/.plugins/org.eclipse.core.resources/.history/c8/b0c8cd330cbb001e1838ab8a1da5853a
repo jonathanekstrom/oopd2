@@ -1,0 +1,34 @@
+package clients;
+
+import factories.AbstractElementFactory;
+import factories.ConcreteElementFactory;
+import interfaces.ElementTypes;
+import interfaces.IElement;
+import interfaces.IElementIterator;
+import textDocBuilder.abstractions.Document;
+
+public class Client
+{
+	public static void main(String[] args)
+	{
+		AbstractElementFactory elementFactory = new ConcreteElementFactory();
+
+		IElement heading = elementFactory.createElement(ElementTypes.HEADING);
+		IElement paragraph = elementFactory.createElement(ElementTypes.PARAGRAPH);
+		IElement table = elementFactory.createElement(ElementTypes.TABLE);
+
+		Document document = new Document();
+		
+		document.addElement(heading);
+		document.addElement(paragraph);
+		document.addElement(table);
+
+		IElementIterator iterator = document.getIterator();
+
+		while (iterator.hasNext())
+		{
+			IElement element = iterator.next();
+			element.render();
+		}
+	}
+}

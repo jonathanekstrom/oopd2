@@ -1,0 +1,6 @@
+package tjofraes;
+
+public interface IElement
+{
+	void render();
+}

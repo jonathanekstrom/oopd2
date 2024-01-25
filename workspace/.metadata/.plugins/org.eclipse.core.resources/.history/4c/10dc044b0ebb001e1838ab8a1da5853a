@@ -1,0 +1,14 @@
+package textDocBuilder.interfaces;
+
+public interface ITextDocBuilder
+{
+
+	void addHeading();
+
+	void addParagraph();
+
+	void addTable();
+
+	void renderDocument();
+
+}

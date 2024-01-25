@@ -1,0 +1,12 @@
+package textDocBuilder.elements;
+
+import textDocBuilder.interfaces.IElement;
+
+public class Heading implements IElement
+{
+
+    @Override
+    public void render() {
+        System.out.println("I'm a Heading");
+    }
+}

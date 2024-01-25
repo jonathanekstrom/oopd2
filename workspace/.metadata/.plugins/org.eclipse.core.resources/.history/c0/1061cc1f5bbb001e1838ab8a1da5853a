@@ -1,0 +1,25 @@
+package textDocBuilder.abstractions;
+
+import textDocBuilder.domain.Font;
+import textDocBuilder.enums.FontSizes;
+import textDocBuilder.enums.FontTypes;
+
+public class FontBuilder
+{
+    private FontSizes size;
+    private FontTypes type;
+
+    public FontBuilder withSize(FontSizes size) {
+        this.size = size;
+        return this;
+    }
+
+    public FontBuilder withType(FontTypes type) {
+        this.type = type;
+        return this;
+    }
+
+    public Font build() {
+        return new Font(size, type);
+    }
+}

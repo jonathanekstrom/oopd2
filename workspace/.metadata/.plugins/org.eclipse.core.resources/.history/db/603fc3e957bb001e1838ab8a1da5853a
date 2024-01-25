@@ -1,0 +1,37 @@
+package textDocBuilder.factories;
+
+import textDocBuilder.domain.Font;
+import textDocBuilder.enums.FontSizes;
+import textDocBuilder.enums.FontTypes;
+import textDocBuilder.interfaces.IFont;
+
+public class ConcreteFontFactory extends AbstractFontFactory
+{
+	private FontSizes size;
+	private FontTypes type;
+
+	public ConcreteFontFactory(FontSizes size, FontTypes type)
+	{
+		this.size = size;
+		this.type = type;
+	}
+	
+	@Override
+	protected IFont createFont(FontSizes size, FontTypes type)
+	{
+		return new Font(size, type);
+	}
+
+	@Override
+	protected FontTypes getFontType()
+	{
+		return null;
+	}
+
+	@Override
+	protected FontSizes getFontSize()
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

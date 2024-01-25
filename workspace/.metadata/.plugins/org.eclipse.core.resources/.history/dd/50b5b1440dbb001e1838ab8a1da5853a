@@ -1,0 +1,22 @@
+package clients;
+
+import textDocBuilder.abstractions.Document;
+import textDocBuilder.abstractions.TextDocBuilderApi;
+import textDocBuilder.factories.AbstractElementFactory;
+import textDocBuilder.factories.ConcreteElementFactory;
+import textDocBuilder.interfaces.*;
+
+public class Client
+{
+	public static void main(String[] args)
+	{
+		ITextDocBuilderApi api = new TextDocBuilderApi();
+		
+		api.addHeading();
+		api.addParagraph();
+		api.addTable();
+		
+		api.renderDocument();
+		
+	}
+}

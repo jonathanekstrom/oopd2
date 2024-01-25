@@ -1,0 +1,18 @@
+package textDocBuilder.factories;
+
+import textDocBuilder.domain.Font;
+import textDocBuilder.enums.FontSizes;
+import textDocBuilder.enums.FontTypes;
+
+public class ConcreteFontFactory extends AbstractFontFactory
+{
+	private FontSizes size;
+	private FontTypes type;
+
+	@Override
+	protected Font getFont(FontSizes size, FontTypes type)
+	{
+		
+		return null;
+	}
+}

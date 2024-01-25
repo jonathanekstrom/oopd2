@@ -1,0 +1,6 @@
+package textElements;
+
+public interface ITextElement
+{
+	void render();
+}

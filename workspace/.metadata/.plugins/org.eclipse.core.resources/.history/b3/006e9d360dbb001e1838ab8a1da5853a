@@ -1,0 +1,52 @@
+package textDocBuilder.abstractions;
+
+import textDocBuilder.factories.AbstractElementFactory;
+import textDocBuilder.factories.ConcreteElementFactory;
+import textDocBuilder.interfaces.ElementTypes;
+import textDocBuilder.interfaces.IElement;
+import textDocBuilder.interfaces.IElementIterator;
+import textDocBuilder.interfaces.ITextDocBuilderApi;
+
+public class TextDocBuilderApi implements ITextDocBuilderApi
+{
+	private AbstractElementFactory elementFactory;
+	private Document document;
+
+	public TextDocBuilderApi()
+	{
+		this.elementFactory = new ConcreteElementFactory();
+		this.document = new Document();
+	}
+
+	@Override
+	public void addHeading()
+	{
+		IElement heading = elementFactory.createElement(ElementTypes.HEADING);
+		document.addElement(heading);
+	}
+
+	@Override
+	public void addParagraph()
+	{
+		IElement paragraph = elementFactory.createElement(ElementTypes.PARAGRAPH);
+		document.addElement(paragraph);
+	}
+
+	@Override
+	public void addTable()
+	{
+		IElement table = elementFactory.createElement(ElementTypes.TABLE);
+		document.addElement(table);
+	}
+
+	@Override
+	public void renderDocument()
+	{
+		IElementIterator iterator = document.getIterator();
+		while (iterator.hasNext())
+		{
+			IElement element = iterator.next();
+			element.render();
+		}
+	}
+}

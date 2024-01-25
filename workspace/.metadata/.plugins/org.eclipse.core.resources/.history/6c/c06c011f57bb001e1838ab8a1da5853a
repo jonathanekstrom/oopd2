@@ -1,0 +1,11 @@
+package textDocBuilder.interfaces;
+
+public interface IFont
+{
+	void apply();
+
+	public static void main(String[] args)
+	{
+		return new Font(size, type);
+	}
+}

@@ -1,0 +1,24 @@
+package clients;
+
+import elements.Document;
+import tjofraes.*;
+
+public class Client
+{
+	public static void main(String[] args)
+	{
+		AbstractElementFactory elementFactory = new ConcreteElementFactory();
+		
+		IElement heading = elementFactory.createElement(ElementTypes.HEADING);
+		IElement elementTwo = elementFactory.createElement(ElementTypes.PARAGRAPH);
+		IElement elementThree = elementFactory.createElement(ElementTypes.TABLE);
+		
+		Document d = new Document();
+		
+		d.addElement(heading);
+		d.addElement(elementTwo);
+		d.addElement(elementThree);
+		
+		d.render();
+	}
+}

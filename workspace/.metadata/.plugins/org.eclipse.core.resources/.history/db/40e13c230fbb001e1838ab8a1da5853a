@@ -1,0 +1,6 @@
+package textDocBuilder.interfaces;
+
+public enum ElementTypes
+{
+	HEADING, PARAGRAPH, LIST, TABLE
+}

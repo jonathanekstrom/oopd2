@@ -1,0 +1,13 @@
+package textElements.composites;
+
+import textElements.interfaces.ITextElement;
+
+public class Document implements ITextElement
+{
+	@Override
+	public void render()
+	{
+		// TODO Auto-generated method stub
+
+	}
+}

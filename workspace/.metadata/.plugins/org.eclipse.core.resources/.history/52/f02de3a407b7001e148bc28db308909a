@@ -1,0 +1,40 @@
+package models;
+
+public class Board
+{
+	private Square[][] boardLayout = new Square[8][8];
+
+	public Board()
+	{
+		findSquare();
+	}
+
+	public void initBoard()
+	{
+		for (int i = 0; i < 8; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (j % 2 == 0)
+				{
+					boardLayout[i][j] = new Square("black");
+				}
+				else
+				{
+					boardLayout[i][j] = new Square("white");
+				}
+			}
+		}
+	}
+
+	private void findSquare()
+	{
+		for (Square[] squareArr : boardLayout)
+		{
+			for (Square square : squareArr)
+			{
+				System.out.println(square.getColor());
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+package clients;
+
+import tjofraes.*;
+
+public class ServiceHost
+{
+	public static void main(String[] args)
+	{
+		AbstractElementFactory creator = new ConcreteElementFactory();
+		
+		IElement e1 = creator.createElement(ElementTypes.HEADING);
+		IElement e2 = creator.createElement(ElementTypes.PARAGRAPH);
+		IElement e3 = creator.createElement(ElementTypes.TABLE);
+		
+		e1.render();
+		e2.render();
+		e3.render();
+	}
+}

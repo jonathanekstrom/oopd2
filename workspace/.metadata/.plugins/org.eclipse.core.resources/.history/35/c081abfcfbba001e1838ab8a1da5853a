@@ -1,0 +1,11 @@
+package factories;
+
+import textComponents.Document;
+
+public class TextComponentFactory
+{
+	public static Document createDocument()
+	{
+		return new Document();
+	}
+}

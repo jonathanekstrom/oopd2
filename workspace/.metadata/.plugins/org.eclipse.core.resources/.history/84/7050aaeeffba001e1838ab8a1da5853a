@@ -1,0 +1,19 @@
+package tjofraes;
+
+public class ConcreteElementFactory extends AbstractElementFactory
+{
+
+	@Override
+	protected IElement getElement(ElementTypes type)
+	{
+		switch (type)
+		{
+		case PARAGRAPH: return new Paragraph();
+		default:
+			break;
+		}
+
+		return null;
+	}
+
+}

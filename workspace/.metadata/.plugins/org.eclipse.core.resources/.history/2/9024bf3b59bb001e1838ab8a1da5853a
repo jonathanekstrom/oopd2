@@ -1,0 +1,18 @@
+package textDocBuilder.factories;
+
+import textDocBuilder.domain.Font;
+import textDocBuilder.enums.FontSizes;
+import textDocBuilder.enums.FontTypes;
+
+public abstract class AbstractFontFactory
+{
+	public Font createFont(FontSizes size, FontTypes type)
+	{
+		Font font = getFont(size, type);
+		return font;
+	}
+
+	protected abstract Font getFont(FontSizes size, FontTypes type);
+	protected abstract FontTypes getFontType();
+	protected abstract FontSizes getFontSize();
+}

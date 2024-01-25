@@ -1,0 +1,23 @@
+package textElements.composites;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import textElements.interfaces.ITextElement;
+
+public class Document implements ITextElement
+{
+	private List<ITextElement> components = new ArrayList<>();
+
+	public void addComponent(ITextElement component)
+	{
+		components.add(component);
+	}
+
+	@Override
+	public void render()
+	{
+		// TODO Auto-generated method stub
+
+	}
+}

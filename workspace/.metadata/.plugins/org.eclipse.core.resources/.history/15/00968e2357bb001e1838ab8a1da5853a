@@ -1,0 +1,13 @@
+package textDocBuilder.domain;
+
+import textDocBuilder.enums.FontSizes;
+import textDocBuilder.enums.FontTypes;
+
+public interface IFont
+{
+
+	void setType(FontTypes type);
+
+	void setSize(FontSizes size);
+
+}

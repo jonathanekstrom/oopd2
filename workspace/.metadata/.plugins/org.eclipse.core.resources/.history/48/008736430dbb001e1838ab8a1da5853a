@@ -1,0 +1,39 @@
+package clients;
+
+import textDocBuilder.abstractions.Document;
+import textDocBuilder.abstractions.TextDocBuilderApi;
+import textDocBuilder.factories.AbstractElementFactory;
+import textDocBuilder.factories.ConcreteElementFactory;
+import textDocBuilder.interfaces.*;
+
+public class Client
+{
+	public static void main(String[] args)
+	{
+		ITextDocBuilderApi api = new TextDocBuilderApi();
+		
+		api.addHeading();
+		api.addParagraph();
+		api.addTable();
+		
+		AbstractElementFactory elementFactory = new ConcreteElementFactory();
+
+		IElement heading = elementFactory.createElement(ElementTypes.HEADING);
+		IElement paragraph = elementFactory.createElement(ElementTypes.PARAGRAPH);
+		IElement table = elementFactory.createElement(ElementTypes.TABLE);
+
+		Document document = new Document();
+		
+		document.addElement(heading);
+		document.addElement(paragraph);
+		document.addElement(table);
+
+		IElementIterator iterator = document.getIterator();
+
+		while (iterator.hasNext())
+		{
+			IElement element = iterator.next();
+			element.render();
+		}
+	}
+}

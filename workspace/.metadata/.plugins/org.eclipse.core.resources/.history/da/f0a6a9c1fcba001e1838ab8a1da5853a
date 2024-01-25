@@ -1,0 +1,25 @@
+package clients;
+
+import factories.TextComponentFactory;
+import textElements.Document;
+import textElements.Heading;
+import textElements.Paragraph;
+
+public class ServiceHost
+{
+
+	public static void main(String[] args)
+	{
+		Heading heading = new Heading("Rubrik 1");
+		Paragraph paragraph = new Paragraph("Detta är en enkel text i stycket.");
+
+		Document document = TextComponentFactory.createDocument();
+		document.addComponent(heading);
+		document.addComponent(paragraph);
+
+		// Rendera hela dokumentet
+		document.render();
+
+	}
+
+}

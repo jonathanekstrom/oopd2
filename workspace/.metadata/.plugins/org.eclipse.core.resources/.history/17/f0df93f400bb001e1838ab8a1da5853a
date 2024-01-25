@@ -1,0 +1,25 @@
+package tjofraes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import tjofraes.IElement;
+
+public class Document implements IElement
+{
+	private List<IElement> elements = new ArrayList<>();
+
+	public void addComponent(IElement component)
+	{
+		elements.add(component);
+	}
+
+	@Override
+	public void render()
+	{
+		for (IElement element : elements)
+		{
+			element.render();
+		}
+	}
+}

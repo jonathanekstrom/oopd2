@@ -1,0 +1,24 @@
+package textDocBuilder.factories;
+
+import textDocBuilder.enums.FontSizes;
+
+public class ConcreteFontFactory extends AbstractFontFactory
+{
+
+	@Override
+	protected int getFontSize(FontSizes size)
+	{
+		switch (size) {
+		case SMALL:
+			return 1;
+		case MEDIUM:
+			return 2;
+		case LARGE:
+			return 3;
+		default:
+			break;
+		}
+		return 0;
+	}
+
+}

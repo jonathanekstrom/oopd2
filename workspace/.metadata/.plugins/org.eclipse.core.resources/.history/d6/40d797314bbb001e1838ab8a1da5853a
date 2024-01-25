@@ -1,0 +1,10 @@
+package textDocBuilder.domain;
+
+import textDocBuilder.enums.FontSizes;
+import textDocBuilder.enums.FontTypes;
+
+public class Font
+{
+	private FontSizes fontSize;
+	private FontTypes fontType;
+}

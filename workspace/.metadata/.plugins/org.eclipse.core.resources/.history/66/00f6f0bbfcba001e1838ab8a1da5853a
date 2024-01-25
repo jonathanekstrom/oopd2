@@ -1,0 +1,17 @@
+package factories;
+
+import textElements.Document;
+import textElements.Heading;
+
+public class TextComponentFactory
+{
+	public static Document createDocument()
+	{
+		return new Document();
+	}
+
+	public static Heading createHeading()
+	{
+		return new Heading();
+	}
+}

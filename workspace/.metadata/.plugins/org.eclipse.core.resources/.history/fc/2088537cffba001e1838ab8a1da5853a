@@ -1,0 +1,13 @@
+package factories;
+
+public abstract class AbstractElementFactory
+{
+	public IElement createElement(ElementTypes type) {
+		IElement element = getPizza(type);
+        // additional preparation steps can be added here
+        return element;
+    }
+
+    // Factory method
+    protected abstract IElement getElement(ElementTypes type);
+}

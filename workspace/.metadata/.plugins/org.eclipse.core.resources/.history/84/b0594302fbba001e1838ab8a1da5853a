@@ -1,0 +1,14 @@
+package classes;
+
+import interfaces.ITextComponent;
+
+public class Heading implements ITextComponent
+{
+	@Override
+	public void render()
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}

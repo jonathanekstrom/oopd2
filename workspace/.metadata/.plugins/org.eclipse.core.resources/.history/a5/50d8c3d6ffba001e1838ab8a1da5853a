@@ -1,0 +1,17 @@
+package clients;
+
+import factories.Heading;
+import factories.Paragraph;
+
+public class ServiceHost
+{
+
+	public static void main(String[] args)
+	{
+		Heading heading = new Heading("Rubrik 1");
+		Paragraph paragraph = new Paragraph("Detta är en enkel text i stycket.");
+
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package textDocBuilder.factories;
+
+import interfaces.ElementTypes;
+import interfaces.IElement;
+
+public abstract class AbstractElementFactory
+{
+	public IElement createElement(ElementTypes type) {
+		IElement element = getElement(type);
+        // additional preparation steps can be added here
+        return element;
+    }
+
+    // Factory method
+    protected abstract IElement getElement(ElementTypes type);
+}

@@ -1,0 +1,14 @@
+package textDocBuilder.abstractions;
+
+public interface ITextDocBuilderApi
+{
+
+	void addHeading();
+
+	void addParagraph();
+
+	void addTable();
+
+	void renderDocument();
+
+}

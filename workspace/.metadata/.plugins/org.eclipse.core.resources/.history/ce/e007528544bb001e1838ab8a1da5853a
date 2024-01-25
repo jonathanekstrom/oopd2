@@ -1,0 +1,6 @@
+package textDocBuilder.factories;
+
+public class ConcreteFontFactory
+{
+
+}

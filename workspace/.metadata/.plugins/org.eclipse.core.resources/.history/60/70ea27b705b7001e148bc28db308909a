@@ -1,0 +1,28 @@
+package models;
+
+public class Board
+{
+	private Square[][] squareLayout = new Square[8][8];
+
+	public Board()
+	{
+
+	}
+
+	private void setupLayout()
+	{
+		for (Square[] squareArr : squareLayout)
+		{
+			for (Square square : squareArr)
+			{
+				if (square.isOdd())
+				{
+					square.setColor("black");
+				} else
+				{
+					square.setColor("white");
+				}
+			}
+		}
+	}
+}

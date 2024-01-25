@@ -1,0 +1,24 @@
+package elements;
+
+import java.util.ArrayList;
+import java.util.List;
+
+// Composite class for the elements within a document
+public class Document implements IElement
+{
+	private List<IElement> elements = new ArrayList<>();
+
+	public void addElement(IElement component)
+	{
+		elements.add(component);
+	}
+
+	@Override
+	public void render()
+	{
+		for (IElement element : elements)
+		{
+			element.render();
+		}
+	}
+}

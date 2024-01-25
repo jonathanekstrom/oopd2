@@ -1,0 +1,25 @@
+package textDocBuilder.elements;
+
+import textDocBuilder.interfaces.IElement;
+
+public class Header implements IElement
+{
+
+	private int fontSize = 0;
+
+	public Header()
+	{
+
+	}
+
+	@Override
+	public void render()
+	{
+		System.out.println("I'm a Header");
+	}
+
+	public void setFontSize(int fontSize)
+	{
+		this.fontSize = fontSize;
+	}
+}

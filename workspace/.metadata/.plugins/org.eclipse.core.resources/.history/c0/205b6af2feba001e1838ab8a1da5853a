@@ -1,0 +1,6 @@
+package factories;
+
+public interface ITextElementFactory
+{
+	ITextElement createTextElement(String content);
+}

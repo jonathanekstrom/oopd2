@@ -1,0 +1,6 @@
+package factories.textElementFactory;
+
+public class HeadingFactory
+{
+
+}

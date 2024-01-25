@@ -1,0 +1,10 @@
+package factories;
+
+public class ParagraphFactory implements ITextElementFactory
+{
+	@Override
+	public IElement createTextElement(String content)
+	{
+		return new Paragraph(content);
+	}
+}

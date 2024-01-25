@@ -1,0 +1,6 @@
+package textElements.interfaces;
+
+public interface ITextElement
+{
+	
+}

@@ -1,0 +1,25 @@
+package tjofraes;
+
+import elements.Heading;
+import elements.Paragraph;
+
+public class ConcreteElementFactory extends AbstractElementFactory
+{
+
+	@Override
+	protected IElement getElement(ElementTypes type)
+	{
+		switch (type)
+		{
+		case PARAGRAPH:
+			return new Paragraph();
+		case HEADING:
+			return new Heading();
+		default:
+			break;
+		}
+
+		return null;
+	}
+
+}

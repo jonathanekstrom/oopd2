@@ -1,0 +1,25 @@
+package textElements;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import textElements.interfaces.ITextElement;
+
+public class Document implements ITextElement
+{
+	private List<ITextElement> elements = new ArrayList<>();
+
+	public void addComponent(ITextElement component)
+	{
+		elements.add(component);
+	}
+
+	@Override
+	public void render()
+	{
+		for (ITextElement element : elements)
+		{
+			element.render();
+		}
+	}
+}

@@ -1,0 +1,10 @@
+package factories;
+
+public class Heading implements IElement
+{
+
+    @Override
+    public void render() {
+        System.out.println("I'm a Heading");
+    }
+}

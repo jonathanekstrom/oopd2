@@ -1,0 +1,14 @@
+package textDocBuilder.factories;
+
+import textDocBuilder.enums.FontSizes;
+
+public abstract class AbstractFontFactory
+{
+	public int createFontSize(FontSizes size)
+	{
+		int fontSize = getFontSize(size);
+		return fontSize;
+	}
+	
+	protected abstract int getFontSize(FontSizes size);
+}
