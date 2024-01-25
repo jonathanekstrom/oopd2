@@ -1,6 +1,0 @@
-package factories.textElementFactory;
-
-public class ParagraphFactory
-{
-
-}

@@ -1,6 +1,0 @@
-package tjofraes;
-
-public enum ElementTypes
-{
-	HEADING, PARAGRAPH, LIST, TABLE
-}

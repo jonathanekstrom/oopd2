@@ -1,6 +1,0 @@
-package textElements.interfaces;
-
-public interface ITextElement
-{
-	void render();
-}

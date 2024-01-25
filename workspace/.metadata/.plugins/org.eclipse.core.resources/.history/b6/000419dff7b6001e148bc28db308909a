@@ -1,6 +1,0 @@
-package models;
-
-public class Board
-{
-	private Square[8][8] 
-}

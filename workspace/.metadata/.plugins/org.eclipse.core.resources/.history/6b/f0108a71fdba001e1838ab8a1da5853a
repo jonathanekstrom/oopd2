@@ -1,6 +1,0 @@
-package factories.textElementFactory.interfaces;
-
-public interface ITextElementFactory
-{
-
-}

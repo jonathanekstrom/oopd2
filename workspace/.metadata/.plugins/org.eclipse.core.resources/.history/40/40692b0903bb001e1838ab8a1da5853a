@@ -1,7 +1,0 @@
-package tjofraes;
-
-public interface IIterator
-{
-	   public boolean hasNext();
-	   public IElement next();
-}

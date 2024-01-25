@@ -1,7 +1,0 @@
-package interfaces;
-
-public interface IDocumentIterator
-{
-	   public boolean hasNext();
-	   public IElement next();
-}

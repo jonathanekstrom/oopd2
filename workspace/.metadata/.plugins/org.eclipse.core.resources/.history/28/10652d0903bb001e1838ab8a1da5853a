@@ -1,6 +1,0 @@
-package tjofraes;
-
-public interface IDocument
-{
-	IIterator getIterator();
-}

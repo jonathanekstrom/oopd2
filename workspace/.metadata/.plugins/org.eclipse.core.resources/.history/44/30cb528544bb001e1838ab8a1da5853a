@@ -1,6 +1,0 @@
-package textDocBuilder.factories;
-
-public class AbstractFontFactory
-{
-
-}

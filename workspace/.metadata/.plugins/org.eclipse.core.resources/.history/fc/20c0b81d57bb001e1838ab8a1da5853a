@@ -1,6 +1,0 @@
-package textDocBuilder.interfaces;
-
-public interface IFont
-{
-	void apply();
-}

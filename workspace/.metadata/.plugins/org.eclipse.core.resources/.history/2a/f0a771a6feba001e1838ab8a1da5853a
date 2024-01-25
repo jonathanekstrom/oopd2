@@ -1,8 +1,0 @@
-package factories.textElementFactory.interfaces;
-
-import textElements.interfaces.ITextElement;
-
-public interface ITextElementFactory
-{
-	ITextElement createTextElement(String content);
-}

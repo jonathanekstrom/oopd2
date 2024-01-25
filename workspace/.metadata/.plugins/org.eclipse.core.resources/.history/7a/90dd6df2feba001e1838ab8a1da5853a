@@ -1,6 +1,0 @@
-package factories;
-
-public interface ITextElement
-{
-	void render();
-}
