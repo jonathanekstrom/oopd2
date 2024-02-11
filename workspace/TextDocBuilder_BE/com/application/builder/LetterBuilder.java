@@ -1,12 +1,12 @@
 package com.application.builder;
 
-import com.application.factory.MarkupFactory;
+import com.application.factory.BaseComponentFactory;
 import com.domain.components.IComponent;
 import com.domain.documents.Letter;
 
-public class LetterBuilder extends DocumentBuilder<LetterBuilder>
+public class LetterBuilder extends BaseDocumentBuilder<LetterBuilder>
 {
-	public LetterBuilder(MarkupFactory factory)
+	public LetterBuilder(BaseComponentFactory factory)
 	{
 		super(factory);
 		super.document = new Letter();

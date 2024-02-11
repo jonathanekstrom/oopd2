@@ -1,20 +1,20 @@
 package com.application.builder;
 
-import com.domain.documents.Document;
+import com.domain.documents.BaseDocument;
 
 public class DocumentDirector
 {
-	public Document buildGraduationDocument(DocumentBuilder<GraduationBuilder> builder)
+	public BaseDocument buildGraduationDocument(BaseDocumentBuilder<GraduationBuilder> builder)
 	{
 		return builder.addHeader().addParagraph().addParagraph().addParagraph().addList().build();
 	}
 
-	public Document buildLetterDocument(DocumentBuilder<LetterBuilder> builder)
+	public BaseDocument buildLetterDocument(BaseDocumentBuilder<LetterBuilder> builder)
 	{
 		return builder.addHeader().addList().addParagraph().addList().addParagraph().addParagraph().addList().build();
 	}
 
-	public Document buildTaxesDocument(DocumentBuilder<TaxesBuilder> builder)
+	public BaseDocument buildTaxesDocument(BaseDocumentBuilder<TaxesBuilder> builder)
 	{
 		return builder.addHeader().addParagraph().addParagraph().addList().addParagraph().build();
 	}

@@ -1,39 +1,39 @@
 package com.application.api;
 
-import com.application.builder.DocumentBuilder;
+import com.application.builder.BaseDocumentBuilder;
 import com.application.builder.DocumentDirector;
 import com.application.builder.GraduationBuilder;
 import com.application.builder.LetterBuilder;
 import com.application.builder.TaxesBuilder;
-import com.application.factory.MarkupFactory;
-import com.domain.documents.Document;
+import com.application.factory.BaseComponentFactory;
+import com.domain.documents.BaseDocument;
 
 public class DocumentApi
 {
-	private MarkupFactory factory;
+	private BaseComponentFactory factory;
 	private DocumentDirector director;
 
-	public DocumentApi(MarkupFactory factory, DocumentDirector director)
+	public DocumentApi(BaseComponentFactory factory, DocumentDirector director)
 	{
 		this.factory = factory;
 		this.director = director;
 	}
 
-	public Document buildGraduationDocument()
+	public BaseDocument buildGraduationDocument()
 	{
-		DocumentBuilder<GraduationBuilder> builder = new GraduationBuilder(factory);
+		BaseDocumentBuilder<GraduationBuilder> builder = new GraduationBuilder(factory);
 		return director.buildGraduationDocument(builder);
 	}
 
-	public Document buildTaxesDocument()
+	public BaseDocument buildTaxesDocument()
 	{
-		DocumentBuilder<TaxesBuilder> builder = new TaxesBuilder(factory);
+		BaseDocumentBuilder<TaxesBuilder> builder = new TaxesBuilder(factory);
 		return director.buildTaxesDocument(builder);
 	}
 
-	public Document buildLetterDocument()
+	public BaseDocument buildLetterDocument()
 	{
-		DocumentBuilder<LetterBuilder> builder = new LetterBuilder(factory);
+		BaseDocumentBuilder<LetterBuilder> builder = new LetterBuilder(factory);
 		return director.buildLetterDocument(builder);
 	}
 }

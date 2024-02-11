@@ -7,12 +7,12 @@ import com.domain.components.IComponent;
 import com.domain.iterator.ComponentIterator;
 import com.domain.iterator.IIterator;
 
-public abstract class Document
+public abstract class BaseDocument
 {
 	private String type;
 	private List<IComponent> components = new ArrayList<>();
 
-	public Document(String type)
+	public BaseDocument(String type)
 	{
 		this.type = type;
 	}

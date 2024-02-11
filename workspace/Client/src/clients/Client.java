@@ -4,7 +4,7 @@ import com.application.api.DocumentApi;
 import com.application.builder.DocumentDirector;
 import com.application.factory.*;
 import com.domain.MarkupType;
-import com.domain.documents.Document;
+import com.domain.documents.BaseDocument;
 
 public class Client
 {
@@ -15,18 +15,18 @@ public class Client
 
 	private static void run()
 	{
-		MarkupFactory fac1 = new ComponentFactory(MarkupType.HTML);
-		MarkupFactory fac2 = new ComponentFactory(MarkupType.INTERNAL);
+		BaseComponentFactory fac1 = new ComponentFactory(MarkupType.HTML);
+		BaseComponentFactory fac2 = new ComponentFactory(MarkupType.INTERNAL);
 		
 		DocumentApi api2 = new DocumentApi(fac1, new DocumentDirector());
-		Document graduationDocument2 = api2.buildGraduationDocument();
-		Document taxesDocument2 = api2.buildTaxesDocument();
-		Document letterDocument2 = api2.buildLetterDocument();
+		BaseDocument graduationDocument2 = api2.buildGraduationDocument();
+		BaseDocument taxesDocument2 = api2.buildTaxesDocument();
+		BaseDocument letterDocument2 = api2.buildLetterDocument();
 		
 		DocumentApi api = new DocumentApi(fac2, new DocumentDirector());
-		Document graduationDocument = api.buildGraduationDocument();
-		Document taxesDocument = api.buildTaxesDocument();
-		Document letterDocument = api.buildLetterDocument();
+		BaseDocument graduationDocument = api.buildGraduationDocument();
+		BaseDocument taxesDocument = api.buildTaxesDocument();
+		BaseDocument letterDocument = api.buildLetterDocument();
 
 		taxesDocument.show();
 		graduationDocument.show();

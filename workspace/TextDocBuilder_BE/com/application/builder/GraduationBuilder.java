@@ -1,13 +1,13 @@
 package com.application.builder;
 
-import com.application.factory.MarkupFactory;
+import com.application.factory.BaseComponentFactory;
 import com.domain.components.IComponent;
 import com.domain.documents.Graduation;
 
-public class GraduationBuilder extends DocumentBuilder<GraduationBuilder>
+public class GraduationBuilder extends BaseDocumentBuilder<GraduationBuilder>
 {
 
-	public GraduationBuilder(MarkupFactory factory)
+	public GraduationBuilder(BaseComponentFactory factory)
 	{
 		super(factory);
 		super.document = new Graduation();
@@ -17,6 +17,7 @@ public class GraduationBuilder extends DocumentBuilder<GraduationBuilder>
 	public GraduationBuilder addHeader()
 	{
 		IComponent header = factory.createHeader();
+		
 		document.add(header);
 		return this;
 	}

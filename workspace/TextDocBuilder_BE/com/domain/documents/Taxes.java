@@ -1,6 +1,6 @@
 package com.domain.documents;
 
-public class Taxes extends Document
+public class Taxes extends BaseDocument
 {
 	public Taxes()
 	{

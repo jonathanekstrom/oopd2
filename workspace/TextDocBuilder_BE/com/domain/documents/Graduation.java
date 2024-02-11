@@ -1,6 +1,6 @@
 package com.domain.documents;
 
-public class Graduation extends Document
+public class Graduation extends BaseDocument
 {
 	public Graduation()
 	{

@@ -1,12 +1,12 @@
 package com.application.builder;
 
-import com.application.factory.MarkupFactory;
+import com.application.factory.BaseComponentFactory;
 import com.domain.components.IComponent;
 import com.domain.documents.Taxes;
 
-public class TaxesBuilder extends DocumentBuilder<TaxesBuilder>
+public class TaxesBuilder extends BaseDocumentBuilder<TaxesBuilder>
 {
-	public TaxesBuilder(MarkupFactory factory)
+	public TaxesBuilder(BaseComponentFactory factory)
 	{
 		super(factory);
 		super.document = new Taxes();

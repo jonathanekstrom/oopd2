@@ -1,6 +1,6 @@
 package com.domain.documents;
 
-public class Letter extends Document
+public class Letter extends BaseDocument
 {
 	public Letter()
 	{

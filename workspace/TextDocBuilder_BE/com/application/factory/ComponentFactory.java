@@ -5,7 +5,7 @@ import com.domain.components.Header;
 import com.domain.components.List;
 import com.domain.components.Paragraph;
 
-public class ComponentFactory extends MarkupFactory
+public class ComponentFactory extends BaseComponentFactory
 {
 	public ComponentFactory(MarkupType type)
 	{
